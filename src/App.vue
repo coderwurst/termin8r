@@ -6,13 +6,13 @@
 </template>
 
 <script>
-import Calender from "./components/Calender.vue";
+import Calender from './components/Calender.vue';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    Calender
-  }
+    Calender,
+  },
 };
 </script>
 

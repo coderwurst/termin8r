@@ -7,20 +7,20 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios';
 
 export default {
-  name: "Calender",
+  name: 'Calender',
   data() {
     return {
-      meetings: null
+      meetings: null,
     };
   },
-  created: function() {
-    axios.get("http://localhost:8080/api/meeting/list/12345").then(response => {
+  created() {
+    axios.get('http://localhost:8080/api/meeting/list/12345').then((response) => {
       this.meetings = response.data;
     });
-  }
+  },
 };
 </script>
 
