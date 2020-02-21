@@ -2,7 +2,9 @@
   <div>
     <h1>{{ msg }}</h1>
     <h2>Your Calender</h2>
-    <p>{{ today }}</p>
+    <p>Time: {{ today }}</p>
+    <p>Year: {{ year }}</p>
+    <p>Month: {{ month }}</p>
   </div>
 </template>
 
@@ -23,6 +25,16 @@ export default {
     axios.get('http://localhost:8080/api/meeting/list/12345').then((response) => {
       this.meetings = response.data;
     });
+  },
+  computed: {
+    year: function computeYear() {
+      const t = this;
+      return t.dateContext.format('Y');
+    },
+    month: function computeMonth() {
+      const t = this;
+      return t.dateContext.format('MMMM');
+    },
   },
 };
 </script>
