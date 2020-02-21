@@ -56,6 +56,14 @@ export default {
       return this.today.format('Y');
     },
   },
+  methods: {
+    increaseMonth: function increaseMonth() {
+      this.dateContext = moment(this.dateContext).add(1, 'month');
+    },
+    decreaseMonth: function decreaseMonth() {
+      this.dateContext = moment(this.dateContext).subtract(1, 'month');
+    },
+  },
 };
 </script>
 
