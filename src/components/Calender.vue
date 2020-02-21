@@ -1,13 +1,24 @@
 <template>
-  <div>
+  <div class="calendar">
     <h1>{{ msg }}</h1>
-    <h2>Your Calender</h2>
-    <p>Time: {{ today }}</p>
-    <p>Year: {{ year }}</p>
-    <p>Month: {{ month }}</p>
-    <p>Days in Month: {{ daysInMonth }}</p>
-    <p>Current Date: {{ currentDate }}</p>
-    <p>First Day of Month: {{ firstDayOfMonth }}</p>
+    <div class="calendar-header">
+      <i @click="decreaseMonth">
+        <font-awesome-icon icon="chevron-left" /></i>
+      <h4>{{month + ' - ' + year}}</h4>
+      <i @click="increaseMonth">
+        <font-awesome-icon icon="chevron-right" />
+      </i>
+    </div>
+    <ul class="weekdays">
+        <li v-for="day in days" v-bind:key="day.id"></li>
+    </ul>
+    <ul class="dates">
+        <li v-for="blank in firstDayOfMonth" v-bind:key="blank.id">&nbsp;</li>
+        <li v-for="date in daysInMonth" :class="{'current-day': date == initialDate &amp;&amp;
+          month == initialMonth && year == initialYear}" v-bind:key="date.id">;
+        <span></span>
+        </li>
+    </ul>
   </div>
 </template>
 
