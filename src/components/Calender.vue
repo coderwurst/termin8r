@@ -28,12 +28,10 @@ export default {
   },
   computed: {
     year: function computeYear() {
-      const t = this;
-      return t.dateContext.format('Y');
+      return this.dateContext.format('Y');
     },
     month: function computeMonth() {
-      const t = this;
-      return t.dateContext.format('MMMM');
+      return this.dateContext.format('MMMM');
     },
   },
 };
