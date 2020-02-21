@@ -5,6 +5,9 @@
     <p>Time: {{ today }}</p>
     <p>Year: {{ year }}</p>
     <p>Month: {{ month }}</p>
+    <p>Days in Month: {{ daysInMonth }}</p>
+    <p>Current Date: {{ currentDate }}</p>
+    <p>First Day of Month: {{ firstDayOfMonth }}</p>
   </div>
 </template>
 
@@ -32,6 +35,15 @@ export default {
     },
     month: function computeMonth() {
       return this.dateContext.format('MMMM');
+    },
+    daysInMonth: function computeDaysInMonth() {
+      return this.dateContext.daysInMonth();
+    },
+    currentDate: function computeCurrentDate() {
+      return this.dateContext.get('date');
+    },
+    firstDayOfMonth: function computeFirstDayOfMonth() {
+      return moment(this.dateContext).subtract((this.currentDate - 1), 'days').day();
     },
   },
 };
