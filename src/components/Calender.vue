@@ -2,18 +2,21 @@
   <div>
     <h1>{{ msg }}</h1>
     <h2>Your Calender</h2>
-    <p>{{ meetings }}</p>
+    <p>{{ today }}</p>
   </div>
 </template>
 
 <script>
 import axios from 'axios';
+import moment from 'moment';
 
 export default {
   name: 'Calender',
   data() {
     return {
-      meetings: null,
+      today: moment(),
+      dateContext: moment(),
+      days: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
     };
   },
   created() {
