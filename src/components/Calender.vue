@@ -45,6 +45,16 @@ export default {
     firstDayOfMonth: function computeFirstDayOfMonth() {
       return moment(this.dateContext).subtract((this.currentDate - 1), 'days').day();
     },
+    // persist today's date, when switching dateContexts during Calander navigation
+    initialDate: function storeInitialDate() {
+      return this.today.get('date');
+    },
+    initialMonth: function storeInitialMonth() {
+      return this.today.format('MMMM');
+    },
+    initialYear: function storeInitialYear() {
+      return this.today.format('Y');
+    },
   },
 };
 </script>
