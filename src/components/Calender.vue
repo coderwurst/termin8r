@@ -3,21 +3,27 @@
     <h1>{{ msg }}</h1>
     <div class="calendar-header">
       <i @click="decreaseMonth">
-        <font-awesome-icon icon="chevron-left" /></i>
-      <h4>{{month + ' - ' + year}}</h4>
+        <font-awesome-icon icon="chevron-left" />
+      </i>
+      <h4>{{ month + ' - ' + year }}</h4>
       <i @click="increaseMonth">
         <font-awesome-icon icon="chevron-right" />
       </i>
     </div>
     <ul class="weekdays">
-        <li v-for="day in days" v-bind:key="day.id"></li>
+      <li v-for="day in days" v-bind:key="day.id">{{ day }}</li>
     </ul>
     <ul class="dates">
-        <li v-for="blank in firstDayOfMonth" v-bind:key="blank.id">&nbsp;</li>
-        <li v-for="date in daysInMonth" :class="{'current-day': date == initialDate &amp;&amp;
-          month == initialMonth && year == initialYear}" v-bind:key="date.id">;
+      <li v-for="blank in firstDayOfMonth" v-bind:key="blank.id">&nbsp;</li>
+      <li
+        v-for="date in daysInMonth"
+        :class="{'current-day': date == initialDate &amp;&amp;
+          month == initialMonth && year == initialYear}"
+        v-bind:key="date.id"
+      >
+        {{ date }}
         <span></span>
-        </li>
+      </li>
     </ul>
   </div>
 </template>
@@ -36,7 +42,7 @@ export default {
     };
   },
   created() {
-    axios.get('http://localhost:8080/api/meeting/list/12345').then((response) => {
+    axios.get('http://localhost:8080/api/meeting/list/12345').then(response => {
       this.meetings = response.data;
     });
   },
@@ -54,7 +60,9 @@ export default {
       return this.dateContext.get('date');
     },
     firstDayOfMonth: function computeFirstDayOfMonth() {
-      return moment(this.dateContext).subtract((this.currentDate - 1), 'days').day();
+      return moment(this.dateContext)
+        .subtract(this.currentDate - 1, 'days')
+        .day();
     },
     // persist today's date, when switching dateContexts during Calander navigation
     initialDate: function storeInitialDate() {
