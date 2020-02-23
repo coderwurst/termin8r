@@ -1,0 +1,313 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders to match snapshot 1`] = `
+<div
+  class="calendar"
+>
+  <h1>
+    
+  </h1>
+   
+  <div
+    class="calendar-header"
+  >
+    <i>
+      <font-awesome-icon
+        icon="chevron-left"
+      />
+    </i>
+     
+    <h4>
+      February - 2020
+    </h4>
+     
+    <i>
+      <font-awesome-icon
+        icon="chevron-right"
+      />
+    </i>
+  </div>
+   
+  <ul
+    class="weekdays"
+  >
+    <li>
+      S
+    </li>
+    <li>
+      M
+    </li>
+    <li>
+      T
+    </li>
+    <li>
+      W
+    </li>
+    <li>
+      T
+    </li>
+    <li>
+      F
+    </li>
+    <li>
+      S
+    </li>
+  </ul>
+   
+  <ul
+    class="dates"
+  >
+    <li>
+       
+    </li>
+    <li>
+       
+    </li>
+    <li>
+       
+    </li>
+    <li>
+       
+    </li>
+    <li>
+       
+    </li>
+    <li>
+       
+    </li>
+     
+    <li
+      class=""
+    >
+      
+      1
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      2
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      3
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      4
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      5
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      6
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      7
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      8
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      9
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      10
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      11
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      12
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      13
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      14
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      15
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      16
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      17
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      18
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      19
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      20
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      21
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      22
+      
+      <span />
+    </li>
+    <li
+      class="current-day"
+    >
+      
+      23
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      24
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      25
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      26
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      27
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      28
+      
+      <span />
+    </li>
+    <li
+      class=""
+    >
+      
+      29
+      
+      <span />
+    </li>
+  </ul>
+</div>
+`;

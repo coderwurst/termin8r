@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import { shallowMount } from '@vue/test-utils';
-import Calender from '../Calender.vue';
+import Calender from '@/components/Calender.vue';
 
 describe('Calender', () => {
   test('is a Vue instance', () => {

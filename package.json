@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve --port 3000",
     "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "test": "vue-cli-service test:unit"
   },
@@ -12,7 +13,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/vue-fontawesome": "^0.1.9",
-    "@vue/cli-plugin-unit-jest": "^4.2.2",
+    "@vue/cli-plugin-unit-jest": "~4.2.0",
     "axios": "^0.19.2",
     "core-js": "^3.6.4",
     "moment": "^2.24.0",
@@ -23,18 +24,12 @@
     "@vue/cli-plugin-eslint": "~4.2.0",
     "@vue/cli-service": "~4.2.0",
     "@vue/eslint-config-airbnb": "^5.0.2",
-    "@vue/test-utils": "^1.0.0-beta.31",
+    "@vue/test-utils": "1.0.0-beta.31",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-vue": "^6.1.2",
     "vue-template-compiler": "^2.6.11"
-  },
-  "prettier": {
-    "trailingComma": "es5",
-    "tabWidth": 2,
-    "semi": true,
-    "singleQuote": true
   },
   "eslintConfig": {
     "root": true,
@@ -51,7 +46,24 @@
     },
     "rules": {
       "arrow-parens": 0
-    }
+    },
+    "overrides": [
+      {
+        "files": [
+          "**/__tests__/*.{j,t}s?(x)",
+          "**/tests/unit/**/*.spec.{j,t}s?(x)"
+        ],
+        "env": {
+          "jest": true
+        }
+      }
+    ]
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true
   },
   "browserslist": [
     "> 1%",
