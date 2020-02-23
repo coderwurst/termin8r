@@ -27,6 +27,12 @@
     "eslint-plugin-vue": "^6.1.2",
     "vue-template-compiler": "^2.6.11"
   },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true
+  },
   "eslintConfig": {
     "root": true,
     "env": {
@@ -40,7 +46,9 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "arrow-parens": 0
+    }
   },
   "browserslist": [
     "> 1%",
