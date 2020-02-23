@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <Calender msg="Welcome to Termin8r" />
+    <Calender />
   </div>
 </template>
 
