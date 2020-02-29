@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <Calender />
+    <Calendar />
   </div>
 </template>
 
 <script>
-import Calender from './components/Calender.vue';
+import Calendar from './components/Calendar.vue';
 
 export default {
   name: 'App',
   components: {
-    Calender,
+    Calendar,
   },
 };
 </script>

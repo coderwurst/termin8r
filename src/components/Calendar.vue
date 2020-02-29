@@ -38,7 +38,7 @@ import axios from 'axios';
 import moment from 'moment';
 
 export default {
-  name: 'Calender',
+  name: 'Calendar',
   data() {
     return {
       today: moment(),
