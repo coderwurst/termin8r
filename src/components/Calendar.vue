@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="header">{{ msg }} - {{ firstDayOfMonth }}</div>
+    <div class="header">Welcome back Jimmy - {{ firstDayOfMonth }}</div>
     <div class="main">
       <div class="calendar-header">
         <span>
@@ -93,50 +93,5 @@ export default {
 </script>
 
 <style>
-.header {
-  grid-area: header;
-  background-color: lightblue;
-}
-
-.main {
-  grid-area: main;
-  background-color: purple;
-}
-
-.calendar-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.weekdays,
-.dates {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  list-style: none;
-}
-
-.dates {
-}
-
-.current-day {
-  color: #ffffff;
-}
-
-.footer {
-  grid-area: footer;
-  background-color: greenyellow;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:
-    'header header header'
-    '. main .'
-    'footer footer footer';
-  width: 100vw;
-  height: 100vh;
-}
+  @import './calendar.css';
 </style>
