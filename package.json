@@ -16,7 +16,7 @@
     "@vue/cli-plugin-unit-jest": "~4.2.0",
     "axios": "^0.19.2",
     "core-js": "^3.6.4",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "vue": "^2.6.11"
   },
   "devDependencies": {
